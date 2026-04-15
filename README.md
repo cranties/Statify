@@ -39,7 +39,7 @@ Whether you are managing a single web app, a cluster of databases, or physical N
 
 |                                Welcome Screen                                 |                              Dashboard Overview                               |
 | :---------------------------------------------------------------------------: | :---------------------------------------------------------------------------: |
-| <img src="https://service.rcproject.it/statify/images/img_1.jpg" width="400"> | <img src="https://service.rcproject.it/statify/images/img_2.jpg" width="400"> |
+| <img src="https://service.rcproject.it/statify/images/img_1.jpg" width="400"> | <img src="https://service.rcproject.it/statify/images/img_d.jpg" width="400"> |
 
 ---
 
