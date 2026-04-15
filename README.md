@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/tuo-username/statify/main/public/logo.png" alt="Statify Logo" width="200">
+  <img src="https://service.rcproject.it/statify/images/logo.jpg" alt="Statify Logo" width="200">
 </p>
 
 <h1 align="center">Statify ⚡</h1>
@@ -37,11 +37,9 @@ Whether you are managing a single web app, a cluster of databases, or physical N
 
 ## 📸 Screenshots
 
-_(💡 Pro-Tip: Add some screenshots of your beautiful dashboard here once you push the code!)_
-
-|                  Dashboard Overview                   |                   Telegram Alerts                    |
-| :---------------------------------------------------: | :--------------------------------------------------: |
-| `<img src="link-to-dashboard-image.jpg" width="400">` | `<img src="link-to-telegram-image.jpg" width="400">` |
+|                                Welcome Screen                                 |                              Dashboard Overview                               |
+| :---------------------------------------------------------------------------: | :---------------------------------------------------------------------------: |
+| <img src="https://service.rcproject.it/statify/images/img_1.jpg" width="400"> | <img src="https://service.rcproject.it/statify/images/img_2.jpg" width="400"> |
 
 ---
 
@@ -61,7 +59,7 @@ To get Statify up and running on your server, follow these simple steps:
 ### 1. Clone the repository
 
 ```bash
-git clone [https://github.com/your-username/statify.git](https://github.com/your-username/statify.git)
+git clone https://github.com/cranties/Statify.git
 cd statify
 ```
 
@@ -97,16 +95,26 @@ php artisan install:statify
 * * * * * cd /path/to/your/project && php artisan queue:work --stop-when-empty --tries=3 --timeout=60 >> /dev/null 2>&1
 ```
 
-🤝 Contributing
+## 🤝 Contributing
+
 Contributions make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
+
 Fork the Project
+
 Create your Feature Branch (git checkout -b feature/AmazingFeature)
+
 Commit your Changes (git commit -m 'Add some AmazingFeature')
+
 Push to the Branch (git push origin feature/AmazingFeature)
+
 Open a Pull Request
 
-📄 License
+## 📄 License
+
 Distributed under the MIT License. See LICENSE for more information.
+
+
+
 
 <p align="center">
 <i>Built with ❤️ for SysAdmins and Developers.</i>
