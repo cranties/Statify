@@ -80,7 +80,7 @@ php artisan key:generate
 ### 4. Run Installer
 
 ```bash
-php artisan install:statify
+php artisan statify:install
 ```
 
 ### 5. Configure Cron
