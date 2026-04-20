@@ -79,21 +79,39 @@ php artisan key:generate
 
 ### 4. Run Installer
 
+Staify has a custom installer to auto-configure the .env file without having to edit it manually.
+
+Use the command below and follow the on-screen instructions to quickly and easily configure Statify!
+
 ```bash
 php artisan statify:install
 ```
 
-### 5. Configure Cron
+<img src="https://service.rcproject.it/statify/images/img_f.gif" width="100%">
+
+### 5. Configure Cron for Schedule
+
+Edit the cron file (sudo crontab -e) and add the command below:
 
 ```bash
 * * * * * cd /path/to/your/project && php artisan schedule:run >> /dev/null 2>&1
 ```
 
-### 6. Configure Queue
+### 6. Background Processing (Queues)
+
+Statify relies on Laravel Queues to perform monitoring checks and send alerts without slowing down the web interface.
+
+Depending on the size of your infrastructure, you can run the queue worker in two ways:
+
+1. Small Infrastructure (Cronjob)
+If you are monitoring a few servers or endpoints, the simplest approach is to use a scheduled task. Add this to your server's crontab (crontab -e) to process pending jobs every minute and then gracefully stop:
 
 ```bash
 * * * * * cd /path/to/your/project && php artisan queue:work --stop-when-empty --tries=3 --timeout=60 >> /dev/null 2>&1
 ```
+
+2. Large Infrastructure (Dedicated Workers)
+If you are monitoring dozens of servers and require immediate, heavy-lifting background processing, running a cron is not enough. You should configure one or more persistent queue workers using Supervisor to run continuous, parallel workers.
 
 ### 7. Configure Statify SubFolder
 
