@@ -95,6 +95,28 @@ php artisan statify:install
 * * * * * cd /path/to/your/project && php artisan queue:work --stop-when-empty --tries=3 --timeout=60 >> /dev/null 2>&1
 ```
 
+### 7. Configure Statify SubFolder
+
+Statify is designed to be installed as a subfolder of your Apache/NGinx; you can then access your Statify server at https://www.yourdomain.com/statify.
+If you prefer to change the destination folder or path, remember to edit the .htaccess file in the puclic folder, specifically the "RewriteBase" directive.
+
+Configure your Apache/NGinx server to use the alias for Statify.
+
+Example for Apache:
+
+```bash
+	Alias /statify /var/www/html/statify/public
+	<Directory /var/www/html/statify/public>
+		AllowOverride All
+		Require all granted
+		Options Indexes FollowSymLinks
+	</Directory>
+```
+
+### 8. Start using Statify!
+
+Connect with a browser to https://www.yourdomain.com/statify and use the credentials created during installation to start configuring Statify!
+
 ## 🤝 Contributing
 
 Contributions make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
