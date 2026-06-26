@@ -45,7 +45,7 @@ Whether you are managing a single web app, a cluster of databases, or physical N
 
 ## 🛠️ Tech Stack
 
-- **Backend:** Laravel 11, PHP 8.2+
+- **Backend:** Laravel 13, PHP 8.2+
 - **Frontend:** Tailwind CSS, Flowbite, Alpine.js, Livewire
 - **Monitoring Engines:** Spatie Uptime Monitor & Server Monitor
 - **Queues:** Redis & Laravel Horizon
@@ -75,6 +75,7 @@ npm install && npm run build
 ```bash
 cp .env.example .env
 php artisan key:generate
+nano .env
 ```
 
 ### 4. Run Installer
@@ -86,12 +87,14 @@ php artisan install:statify
 ### 5. Configure Cron
 
 ```bash
+crontab -e
 * * * * * cd /path/to/your/project && php artisan schedule:run >> /dev/null 2>&1
 ```
 
 ### 6. Configure Queue
 
 ```bash
+crontab -e
 * * * * * cd /path/to/your/project && php artisan queue:work --stop-when-empty --tries=3 --timeout=60 >> /dev/null 2>&1
 ```
 
